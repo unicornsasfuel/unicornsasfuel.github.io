@@ -1,15 +1,17 @@
 <head><title>Awwww yea</title></head>
 <body><script>
-navigator.vibrate = navigator.vibrate ||
+function vibe(milliseconds){
+  navigator.vibrate = navigator.vibrate ||
                   navigator.webkitVibrate ||
                   navigator.mozVibrate || 
                   navigator.msVibrate;
-
-if (navigator.vibrate) {
-  while (true){
-   navigator.vibrate(500);
+                  
+  if(navigator.vibrate){
+    navigator.vibrate([1000,500,1000,500,1000]);
   }
 }
+
 </script>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XgtopghkBZc" frameborder="0" allowfullscreen></iframe>
+<input type='button' value="Let's get it on" onclick="vibe(10)">
+<br><iframe width="560" height="315" src="https://www.youtube.com/embed/XgtopghkBZc" frameborder="0" allowfullscreen></iframe>
 </body>
